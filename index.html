@@ -1,10 +1,11 @@
 <html lang="en">
 <head>
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Angular 2 App</title>
-        <!-- 1. Cargar librerías -->
+    <!-- 1. Cargar librerías -->
     <!-- IE required polyfills, in this exact order -->
     <script src="node_modules/es6-shim/es6-shim.min.js"></script>
     <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
@@ -14,7 +15,7 @@
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
     <!-- 2. Configurar SystemJS -->
     <script>
       System.config({
@@ -28,6 +29,9 @@
       System.import('app/main')
             .then(null, console.error.bind(console));
     </script>
+
+    <!-- 3. Cargar CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
     <mi-app></mi-app>

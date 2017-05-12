@@ -16,3 +16,17 @@ h2, li {
 #CartelPelicula{
     margin-bottom: 20px;
 }
+
+.pelicula-titulo{
+    cursor: pointer;
+}
+
+.pelicula-titulo:hover{
+    text-decoration: underline;
+}
+
+.clicked{
+    font-size: 20px;
+    color:navy;
+    font-family: Ubuntu
+}
