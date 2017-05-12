@@ -1,5 +1,11 @@
 <h1>{{TituloPagina}}</h1>
-
-<peliculas-list></peliculas-list>
+<nav>
+    <ul>
+        <li><a [routerLink]="['Peliculas']">Inicio</a></li>
+        <li> Agregar Pelicula</li>
+        <li><a [routerLink]="['Contacto']">Contacto</a></li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
 
 <peliculas-footer></peliculas-footer>
