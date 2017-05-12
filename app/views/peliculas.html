@@ -1,7 +1,6 @@
 <div id="Contenedor">
-
     <h1>{{TituloPagina}}</h1>
-    <h2>Listado 2017</h2>
+    <h2>Mejor Pelicula 2017</h2>
     <button (click)="onShowHide(true)" [class.showingData]="MostrarDatos===true">Mostrar Informacion</button>
     <button (click)="onShowHide(false)" [class.showingData]="MostrarDatos===false">Ocultar Informacion</button>
         <ul *ngIf="MostrarDatos === true">
@@ -14,4 +13,15 @@
         <input type="text" (keypress)="debug(true)" [(ngModel)]="Pelicula.Titulo">
 
         </p>
+
+        <hr/>
+
+        <h2>Peliculas 2017</h2>
+        <ul>
+            <ul *ngFor="#Pelicula of Peliculas" id="CartelPelicula">
+                <li>Titulo: {{Pelicula.Titulo}}</li>
+                <li>Director: {{Pelicula.Director}}</li>
+                <li *ngIf="Pelicula.Anio">Año: {{Pelicula.Anio}}</li>
+            </ul>
+        </ul>
 </div>
