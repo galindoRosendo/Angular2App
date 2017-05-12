@@ -19,7 +19,7 @@
         <h2>Peliculas 2017</h2>
         <ul>
             <ul *ngFor="#Pelicula of Peliculas" id="CartelPelicula">
-                <li (click)="onChangeMovie(Pelicula)" class="pelicula-titulo" [class.clicked]="PeliculaElegida.IdPelicula===Pelicula.IdPelicula">Titulo: {{Pelicula.Titulo}}</li>
+                <li (click)="onChangeMovie(Pelicula)" class="pelicula-titulo" [class.clicked]="PeliculaElegida.Titulo===Pelicula.Titulo">Titulo: {{Pelicula.Titulo}}</li>
                 <li>Director: {{Pelicula.Director}}</li>
                 <li *ngIf="Pelicula.Anio">Año: {{Pelicula.Anio}}</li>
             </ul>
