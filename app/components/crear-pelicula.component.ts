@@ -12,20 +12,25 @@ import {OnInit} from "angular2/core";
 
 export class CrearPeliculaComponent implements OnInit{
     public tituloPelicula="";
-    
+    public nuevaPelicula:OPelicula;
     constructor(private _peliculasService:PeliculasService , 
                 private _router:Router,
                 private _routeParams:RouteParams){
     }
 
-    onCrearPelicula(titulo, director, anio){
-        let pelicula:OPelicula = new OPelicula(77, titulo, director, anio);
-        this._peliculasService.insertPelicula(pelicula);
+    onSubmit(){
+        this._peliculasService.insertPelicula(this.nuevaPelicula);
 
-        this._router.navigate(["Peliculas"])
+        this._router.navigate(["Peliculas"]);
     }
 
     ngOnInit():any{
         this.tituloPelicula = this._routeParams.get("titulo");
+        this.nuevaPelicula=new OPelicula(
+            0,
+            this._routeParams.get("Titulo"),
+            this._routeParams.get("Director"),
+            parseInt(this._routeParams.get("Anio"))
+            );
     }
 }
