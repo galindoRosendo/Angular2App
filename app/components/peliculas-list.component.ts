@@ -1,11 +1,16 @@
 import { Component } from 'angular2/core';
 import {OPelicula} from "../models/peliculas";
 import {PeliculasService} from "../services/peliculas.service";
+import {ROUTER_DIRECTIVES, RouteConfig, Router} from "angular2/router";
 
 @Component({
     selector:'peliculas-list',
     templateUrl:'app/views/peliculas-list.html',
-    providers:[PeliculasService]    
+    providers:[PeliculasService],
+    directives:[
+        PeliculasListComponent,
+        ROUTER_DIRECTIVES
+        ]    
 })
 
 
